@@ -75,19 +75,18 @@ impl Simulator {
         for _ in 0..STEPS_PER_GEN {
             self.step();
 
-            if true {
-                let sample = self.blobs[0];
-                let config = bincode::DefaultOptions::new()
-                    .with_varint_encoding()
-                    .allow_trailing_bytes();
-                let sample_code = format!(
-                    "{}",
-                    hex::encode(config.serialize(&sample.genomes).unwrap())
-                );
+            // sample and draw
+            let sample = self.blobs[0];
+            let config = bincode::DefaultOptions::new()
+                .with_varint_encoding()
+                .allow_trailing_bytes();
+            let sample_code = format!(
+                "{}",
+                hex::encode(config.serialize(&sample.genomes).unwrap())
+            );
 
-                self.draw(i, survived, sample, sample_code).await;
-                next_frame().await;
-            }
+            self.draw(i, survived, sample, sample_code).await;
+            next_frame().await;
         }
     }
 
