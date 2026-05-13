@@ -21,9 +21,8 @@ Figure 1: neural network sample 10.
 ### Next steps
 
 I would love to implement rare mutations in order to increase survivorship in changing environments. In terms of simulation logic, I would like to implement collisions, killing neighbours, and pheremones. For data analysis, I want to create tools such as a streamlined neural network directed graph generator.
-### Bevolution
 
 ## Evolution 3D
 Using Rust's Bevy game engine to simulate thousands of small neural networks interacting and evolving in a 3 dimensional time-based environment. The following video shows a sample simulation where only entities in the top right survive. Notice how entities tend to learn to move to the top right over each generation, until eventually all survive.
 
-https://github.com/user-attachments/assets/7dc1bb27-2d3a-4180-bf37-1aace3d5882b
+https://github.com/user-attachments/assets/589054a6-0fa0-4360-a017-8195703b752a
