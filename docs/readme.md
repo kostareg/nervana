@@ -25,6 +25,11 @@ Figure 1: neural network sample 10.
 
 Dependencies for the visual tools are installed in the Nix shell. Run `nix develop` to enter. It's recommended to run the Bevy simulation in release mode if you have a restricted computer or no GPU.
 
+```bash
+cargo run --release --bin nervana-2d
+cargo run --release --bin nervana-3d
+```
+
 ## Next steps
 
-I would love to implement rare mutations in order to increase survivorship in changing environments. In terms of simulation logic, I would like to implement collisions, killing neighbours, and pheremones. For data analysis, I want to create tools such as a streamlined neural network directed graph generator.
+I would love to implement rare mutations in order to increase survivorship in changing environments. In terms of simulation logic, I would like to implement 2D collisions, killing neighbours, and pheremones. For data analysis, I want to create tools such as a streamlined neural network directed graph generator.

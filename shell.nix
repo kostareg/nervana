@@ -1,8 +1,8 @@
 {pkgs}: let
   buildInputs = with pkgs; [
     fenix.minimal.toolchain
-    cargo-expand # todo: with fenix
-    rust-analyzer # todo: above
+    cargo-expand
+    rust-analyzer
     pkg-config
 
     udev

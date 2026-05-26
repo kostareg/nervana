@@ -15,6 +15,8 @@ pub struct Genome {
 }
 
 impl Genome {
+    /// Builds a random pathway: a random source and sink wired together with a
+    /// random weight in `-10..=10`.
     pub fn random_new() -> Self {
         let mut rng = rand::rng();
 

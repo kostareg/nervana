@@ -32,6 +32,9 @@ impl Simulator {
         }
     }
 
+    /// Runs the whole simulation: each generation steps the population, culls
+    /// everyone on the left half, and repopulates from the survivors. Once the
+    /// generation cap is hit it draws the final population in a loop.
     pub async fn run(&mut self) {
         let mut rng = rand::rng();
         let mut survived = POPULATION;
@@ -71,6 +74,9 @@ impl Simulator {
         }
     }
 
+    /// Runs a single generation: steps the population `STEPS_PER_GEN` times,
+    /// drawing a frame after each step. `i` is the generation number and
+    /// `survived` the previous generation's survivor count, both for display.
     pub async fn run_generation(&mut self, i: usize, survived: usize) {
         for _ in 0..STEPS_PER_GEN {
             self.step();
@@ -156,6 +162,9 @@ impl Simulator {
         }
     }
 
+    /// Renders one frame: the kill region, the population, and a stats panel
+    /// describing the simulation and the sampled `sample` blob. Also handles
+    /// the pause (`p`) and quit (`q`) keys.
     async fn draw(&self, i: usize, survived: usize, sample: Blob, sample_code: String) {
         let fill = || {
             clear_background(BLACK);
@@ -252,6 +261,7 @@ impl Simulator {
         fill();
     }
 
+    /// Maps a blob's `-1..=1` board position to on-screen pixel coordinates.
     fn to_screen_coords(&self, x: f32, y: f32) -> (f32, f32) {
         let screen_x = 50. + ((x + 1.0) * 64.0) * 4.0; // Scale coordinates
         let screen_y = 50. + ((y + 1.0) * 64.0) * 4.0;

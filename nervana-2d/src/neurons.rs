@@ -48,6 +48,7 @@ pub enum Sink {
 }
 
 impl Source {
+    /// Picks a source neuron uniformly at random.
     pub fn random_new() -> Self {
         let mut rng = rand::rng();
         match rng.random_range(0..7) {
@@ -63,6 +64,7 @@ impl Source {
 }
 
 impl Sink {
+    /// Picks a sink neuron uniformly at random.
     pub fn random_new() -> Self {
         let mut rng = rand::rng();
         match rng.random_range(0..6) {

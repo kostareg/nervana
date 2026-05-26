@@ -15,6 +15,8 @@ pub struct Blob {
     pub internal_state: InternalState,
 }
 
+/// The accumulated values of a blob's four internal neurons, carried between
+/// simulation steps.
 #[derive(Debug, Copy, Clone)]
 pub struct InternalState {
     pub i0: f32,
@@ -51,6 +53,7 @@ impl Blob {
 }
 
 impl InternalState {
+    /// Creates an internal state with randomized starting values.
     pub fn random_new() -> Self {
         let mut rng = rand::rng();
 
