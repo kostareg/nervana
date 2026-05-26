@@ -1,5 +1,5 @@
 [package]
-name = "evolution-rs-3d"
+name = "nervana-3d"
 version = "0.1.0"
 edition = "2024"
 

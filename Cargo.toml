@@ -1,6 +1,6 @@
 [workspace]
 resolver = "3"
-members = ["evolution-rs-2d", "evolution-rs-3d"]
+members = ["nervana-2d", "nervana-3d"]
 
 [profile.dev]
 opt-level = 1

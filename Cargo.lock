@@ -2243,30 +2243,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "evolution-rs-2d"
-version = "0.1.0"
-dependencies = [
- "bincode",
- "gl",
- "hex",
- "macroquad",
- "rand 0.9.4",
- "rayon",
- "serde",
-]
-
-[[package]]
-name = "evolution-rs-3d"
-version = "0.1.0"
-dependencies = [
- "bevy",
- "bevy_egui",
- "bevy_rapier3d",
- "rand 0.9.4",
- "zerocopy",
-]
-
-[[package]]
 name = "fastrand"
 version = "2.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3490,6 +3466,30 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ee6cda3051665f1fb8d9e08fc35c96d5a244fb1be711a03b71118828afc9a873"
 dependencies = [
  "jni-sys 0.3.1",
+]
+
+[[package]]
+name = "nervana-2d"
+version = "0.1.0"
+dependencies = [
+ "bincode",
+ "gl",
+ "hex",
+ "macroquad",
+ "rand 0.9.4",
+ "rayon",
+ "serde",
+]
+
+[[package]]
+name = "nervana-3d"
+version = "0.1.0"
+dependencies = [
+ "bevy",
+ "bevy_egui",
+ "bevy_rapier3d",
+ "rand 0.9.4",
+ "zerocopy",
 ]
 
 [[package]]

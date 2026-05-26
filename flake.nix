@@ -11,7 +11,7 @@
   }:
     flake-utils.lib.simpleFlake {
       inherit self nixpkgs;
-      name = "dakstra";
+      name = "nervana";
       overlay = fenix.overlays.default;
       shell = ./shell.nix;
     };
